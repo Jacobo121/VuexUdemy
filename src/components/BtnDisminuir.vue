@@ -1,11 +1,16 @@
 <template lang="">
     <div>
-        <button>Disminuir</button>
+        <button @click="disminuirContador(50)">Disminuir</button>
     </div>
 </template>
 <script>
+import {mapActions} from 'vuex'
+
 export default {
     
+    methods: {
+        ...mapActions(['disminuirContador'])
+    }
 }
 </script>
 <style lang="">

@@ -7,17 +7,24 @@
 
     <button @click="accionIncrementar" >Incrementa el contador</button>
     <btn-disminuir></btn-disminuir>
+
+    <hr>
+
+    <BotonAccion :estado="true" />
+    <BotonAccion :estado="false" />
   </div>
 </template>
 
 <script>
+import BotonAccion from '../components/BotonAccion.vue'
 import BtnDisminuir from '../components/BtnDisminuir'
 import {mapState, mapMutations, mapActions} from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    BtnDisminuir
+    BtnDisminuir,
+    BotonAccion
   },
 
   data() {
